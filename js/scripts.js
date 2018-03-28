@@ -1,17 +1,34 @@
-debugger;
 
+var newArray = [];
 var array = [];
-for ( var index = 0; index <= inputNumber[index].length; index ++){
-  array.push(inputNumber[index]);
-};
+
+  translate = function(sentence){
+    array.push(sentence);
+    
+    for (index = 0; index <= array.length; index ++){
+      if (array[index].match(/\d/)){
+        return false;
+      } else {
+        return true;
+      }
+      if (array[index].match(/^a|e|i|o|u/)){
+
+      }
+
+    }
+  };
+
+
 
 
 
 $(document).ready(function(){
   $("form#formOne").submit(function(event){
     event.preventDefault();
-    var inputNumber = $("input#pigLatin").val();
-    var result = convertor(inputNumber);
-    // var result = ignoreNumber;
+    debugger;
+    var  sentence = $("input#sentence").val();
+    var result = translate(sentence);
+    $("#result").text(result);
+
   });
 });
