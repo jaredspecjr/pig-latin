@@ -1,24 +1,13 @@
 
-var newArray = [];
-var array = [];
-
+var vowels = ["a", "e", "i", "o", "u"];
+var consonants = ["q", "w", "r", "t", "y", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
   translate = function(sentence){
-    array.push(sentence);
-    
-    for (index = 0; index <= array.length; index ++){
-      if (array[index].match(/\d/)){
-        return false;
-      } else {
-        return true;
-      }
-      if (array[index].match(/^a|e|i|o|u/)){
-
-      }
-
+    if (sentence.match(/\d/)){
+      return false;
+    } else if (sentence.charAt(0).includes(vowels())){
+      return true;
     }
   };
-
-
 
 
 
